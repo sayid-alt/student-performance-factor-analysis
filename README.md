@@ -1,4 +1,22 @@
-# student-performance-factor-analysis
+# Student Performance Factor Analysis
+
+# Table of Contents
+
+- [📂 Dataset Source](## dataset-source)
+- [🎯 Objective](## Objective)
+- [🥅 Goals](#-goals)
+- [💡 Purpose](#-purpose)
+- [🗂️ Project Structure](#️-project-structure)
+- [🌟 Potential Applications](#-potential-applications)
+- [📝 Analysis](#-analysis)
+  - [Data Understanding](#data-understanding)
+    - [Variables of Data](#variables-of-data)
+  - [Data Preparation](#data-preparation)
+    - [1. Data Cleansing](#1-data-cleansing)
+    - [2. Distribution and Outliers Handling](#2-distribution-and-outliers-handling)
+    - [3. Encoding the Categorical Features](#3-encoding-the-categorical-features)
+    - [4. Data Scaling](#4-data-scaling)
+- [📊 Build Clustering Model](#-build-clustering-model)
 
 ## 📂 Dataset Source
 The dataset for this project is sourced from [Kaggle](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors).
@@ -181,3 +199,80 @@ However, following table describes the summary of Silhouette Score of each strat
 | PCA           | 0.7411     | 8               | 0.7432     | 9                  |
 
 And for the visualization of the clusters as follows:
+
+<img src="https://raw.githubusercontent.com/sayid-alt/student-performance-factor-analysis/refs/heads/main/img/cluster_viz.png" />
+
+### Cluster Results Analysis and Interpretation
+
+1. Cluster 0:
+    - ****Family_income**** = Low
+    - ****Parental_education_level**** = Postgraduate
+    - **Rata-rata exam score** = 66,496
+    - **Rata-rata attendance** = 79,925
+    - **Frekuensi** = 1286
+    - **Analisis**: Kluster 1 memiliki nilai **family_income** yang rendah dan **parental_education_level** yang tinggi (postgraduate). Kemungkinan demografi pada siswa ini memungkinan tidak seimbangnya antara akonomi dan pencapaian pada pendidikannya, atau seorang orang tua yang lebih memfokuskan edukasi yang tinggi dari pada income yang tinggi.
+
+2. Cluster 1:
+    - ****Family_income**** = Medium
+    - ****Parental_education_level**** = High School
+    - **Rata-rata exam score** = 67.900
+    - **Rata-rata attendance** = 79.706
+    - **Frekuensi** = 521
+    - **Analisis** = Kluster 2 memiliki nilai **family_income** yang tinggi dan **parental_education_level** yang tinggi (high school). Siswa ini memiliki keluarga yang mungkin memiliki kemampuan teknikal yang dapat meningkatkan income dan kestabilan ekonominya.
+
+3. Cluster 2:
+    - ****Family_income**** = High
+    - **Parental_education_level** = College
+    - **Rata-rata exam score** = 67.045
+    - **Rata-rata attendance** = 79.644
+    - **Frekuensi** = 1254
+    - **Analisis** =  Kluster ini merepresentasikan keluarga yang memiliki income tinggi dan kemampuan intelektual yang tinggi. Sehingga dapat pekerjaan yang layak sesuai dari jurusan pendidikan yang diampu, seperti: management, engineering, atau spesialis.
+
+4. Cluster 3:
+    - **Family_income** = Low
+    - **Parental_education_level** = High school
+    - **Rata-rata exam score** = 66.860
+    - **Rata-rata attendance** = 79.888
+    - **Frekuensi** = 784
+    - **Analisis** =  Kluster yang mempresentasikan keluarga dengan pemasukan yang rendah dan tingkat pendidikan yang rendah. Hal itu dapat mengindikasikan kelemahan ekonomi dan terbatasnya lapangan pekerjaan yang tersedia.
+
+5. Cluster 4:
+
+    - **Family_income** = Medium
+    - **Parental_education_level** = College
+    - **Rata-rata exam score** = 67.417
+    - **Rata-rata attendance** = 79.591
+    - **Frekuensi** = 619
+    - **Analisis** = Kluster merepresentasikan potensial dari middle-class dimana yang dapat gaji yang stabil, pekerjaan ini seperti, guru atau Professional tingkat pemula
+
+6. Cluster 5:
+    - **Family_income** = Low
+    - **Parental_education_level** = College
+    - **Rata-rata exam score** = 67.740
+    - **Rata-rata attendance** = 81.461
+    - **Frekuensi** = 512
+    - **Analisis**  Kluster ini menggambarkan, walau orang tua yang memiliki pendidikan yang tinggi, kluster ini memungkinkan underemployment, dimana pekerjaan yang mereka dapat tidak sesuai dengan gelar pendidikan yang didapatkan, atau mereka tinggal di wilayah yang pendapatan daerahnya rendah.
+
+7. Cluster 6:
+    - **Family_income** = High
+    - **Parental_education_level** = High School
+    - **Rata-rata exam score** = 67.539
+    - **Rata-rata attendance** = 80.351
+    - **Frekuensi** = 791
+    - **Analisis** Kluster ini meskipun mempunyai pendidikan yang rendah, akan tetapi mempunyai income yang tinggi, ini memungkinkan seorang pengusaha, mempunyai warisan, atau kemampuan dalam berdagang yang tidak dimiliki oleh seorang yang pendidikan tinggi
+
+8. Cluster 7:
+    - **Family_income** = Medium
+    - **Parental_education_level** = Postgraduate
+    - **Rata-rata exam score** = 68.041
+    - **Rata-rata attendance** = 80.148
+    - **Frekuensi** = 364
+    - **Analisis** = Kelompok ini mencakup keluarga dengan pendapatan sedang dan pendidikan pascasarjana. Ini mungkin menunjukkan profesi di bidang pendidikan, penelitian, atau layanan publik, yang sering kali memerlukan gelar lanjutan tetapi tidak selalu menawarkan gaji tinggi.
+
+9. Cluster 8:
+    - **Family_income** = High
+    - **Parental_education_level** = Postgraduate
+    - **Rata-rata exam score** = 68.607
+    - **Rata-rata attendance** = 80.360
+    - **Frekuensi** = 247
+    - **Analisis** = Kelompok ini kemungkinan besar terdiri dari keluarga yang berpendidikan tinggi dan berpenghasilan tinggi. Orang tua dalam kelompok ini mungkin memiliki profesi bergengsi atau bergaji tinggi, seperti dokter, pengacara, atau eksekutif perusahaan.
