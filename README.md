@@ -172,12 +172,12 @@ To do feature selection we can try the following strategies:
 1. Drop Featrues with low variance
 2. PCA (principle component analysis)
 
-Here's the code:
-```python
-features_var = np.var(df_clustered, axis=0).sort_values(ascending=False)
-features_var = pd.Series(features_var, index=df_clustered.columns).sort_values(ascending=False)
+However, following table describes the summary of Silhouette Score of each strategies.
 
-  
-df_selected = df_clustered.loc[:, features_var > 0.5]
-```
+|               | dbscore    |                 | kmeans     |                    |
+| ------------- | ---------- | --------------- | ---------- | ------------------ |
+|               | Best Score | Number of Clust | Best Score | Number of Clusters |
+| High Variance | 1          | 9               | 1          | 9                  |
+| PCA           | 0.7411     | 8               | 0.7432     | 9                  |
 
+And for the visualization of the clusters as follows:
