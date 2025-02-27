@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-- [📂 Dataset Source](## dataset-source)
-- [🎯 Objective](## Objective)
+- [📂 Dataset Source](##dataset-source)
+- [🎯 Objective](##Objective)
 - [🥅 Goals](#-goals)
 - [💡 Purpose](#-purpose)
 - [🗂️ Project Structure](#️-project-structure)
